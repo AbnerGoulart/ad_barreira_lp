@@ -31,7 +31,7 @@ export function Navigation() {
       <div
         className={`absolute left-0 top-full w-full bg-gray-200 text-black overflow-hidden 
           transition-all duration-300 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"} 
-          md:opacity-100 md:max-h-full md:relative md:bg-transparent`}
+          md:opacity-100 md:max-h-full md:relative md:bg-transparent -screen`}
       >
         {/* Itens do menu */}
         <ul className="flex flex-col items-center gap-2 md:flex-row md:gap-6 md:justify-end">

@@ -3,9 +3,9 @@ import { Header } from "./Header";
 
 export function AppLayout() {
   return (
-    <div className="w-screen h-screen bg-gray-300 text-gray-700">
+    <div className="w-screen h-screen bg-gray-300 text-gray-700 overflow-x-hidden">
       <Header />
-      <main className="w-full md:w-auto"> 
+      <main className="w-full md:w-auto mt-19 md:mt-0"> 
         <Outlet />
       </main>
     </div>

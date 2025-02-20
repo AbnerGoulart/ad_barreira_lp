@@ -4,33 +4,21 @@ export function Home() {
   return (
     <div className="flex flex-col items-center justify-center text-gray-700">
       <Intro />
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">
-        Bem-vindo à AD Barreira
-      </h1>
-
-
-      <section className="max-w-3xl text-center space-y-6">
-        <p>
-          A{" "}
-          <span className="font-semibold">
-            Assembleia de Deus - AD Barreira
-          </span>
-          , localizada no bairro da Barreira, em{" "}
-          <span className="font-semibold">Delfim Moreira/MG</span>, faz parte da{" "}
-          <span className="font-semibold">
-            Assembleia de Deus Missão Itajubá
-          </span>
-          . Fundada em meados de <span className="font-semibold">1963</span>{" "}
-          pelo <span className="font-semibold">Pastor José Rosa</span>, nasceu
-          com a visão de proclamar o Evangelho de Cristo, seguindo o chamado
-          bíblico de:
+      <section className="bg-amber-600 text-center space-y-8 w-full py-8 px-8 md:px-8">
+        <p className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-screen-lg mx-auto">
+          A <strong>Assembleia de Deus - AD Barreira</strong>, fundada em 1963
+          pelo Pastor José Rosa, está situada em Delfim Moreira/MG, no bairro da
+          Barreira, alto da Serra da Mantiqueira.
         </p>
 
-        <blockquote className="italic bg-gray-100 p-4 rounded-md border-l-4 border-gray-500">
-          "Ir por todo o mundo e pregar o Evangelho a toda criatura" (Marcos
-          16:15).
-        </blockquote>
+        <p className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-screen-lg mx-auto">
+          Somos uma igreja acolhedora e fervorosa no Espírito, filiada à
+          Assembleia de Deus Missão Itajubá, vivendo o chamado de Cristo: "Ir
+          por todo o mundo e pregar o Evangelho a toda criatura" (Marcos 16:15).
+        </p>
+      </section>
 
+      <section className="max-w-3xl text-center space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 mt-8">
           Nossa Missão e Fé
         </h2>
