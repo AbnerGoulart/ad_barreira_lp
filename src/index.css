@@ -2,4 +2,18 @@
 
 @theme {
   --default-font-family: "Oswald", serif;
+  --font-geist: "Geist";
+  --font-geist-mono: "Geist+Mono";
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a8a5a5;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
