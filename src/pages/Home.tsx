@@ -1,10 +1,11 @@
+import { Banner } from "../components/Banner";
 import { Intro } from "../components/Intro";
 
 export function Home() {
   return (
     <div className="flex flex-col items-center justify-center text-gray-700">
       <Intro />
-      <section className="bg-amber-600 text-center space-y-8 w-full py-8 px-8 md:px-8">
+      <section className="bg-gray-200 text-center space-y-8 w-full py-8 px-8 md:px-8">
         <p className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-screen-lg mx-auto">
           A <strong>Assembleia de Deus - AD Barreira</strong>, fundada em 1963
           pelo Pastor José Rosa, está situada em Delfim Moreira/MG, no bairro da
@@ -17,6 +18,8 @@ export function Home() {
           por todo o mundo e pregar o Evangelho a toda criatura" (Marcos 16:15).
         </p>
       </section>
+
+      <Banner />
 
       <section className="max-w-3xl text-center space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 mt-8">

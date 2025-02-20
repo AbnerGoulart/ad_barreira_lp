@@ -19,9 +19,9 @@ export function Intro() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-bold"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-normal "
         >
-          AD Barreira
+          AD BARREIRA
         </motion.h1>
         <motion.h3
           initial={{ opacity: 0, scale: 0.8 }}
