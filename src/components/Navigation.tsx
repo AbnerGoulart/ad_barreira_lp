@@ -16,7 +16,7 @@ export function Navigation() {
   };
 
   return (
-    <nav className="relative w-full">
+    <nav className="w-full">
       {/* Botão do menu - Aparece apenas no mobile */}
       <div className="md:hidden flex justify-end p-2">
         <button
