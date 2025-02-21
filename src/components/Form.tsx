@@ -13,8 +13,7 @@ export function Form() {
   return (
     <form
       action=""
-      className="w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl bg-transparent 
-      space-y-6 py-8 px-6 sm:px-8 md:px-12 mx-auto font-geist"
+      className="w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl bg-transparent space-y-6 py-8 px-1 sm:px-8 md:px-12 mx-auto font-geist"
     >
       <Input required legend="Nome" type="text" placeholder="Nome completo" />
 
@@ -31,35 +30,35 @@ export function Form() {
             </option>
           ))}
         </Select>
-        <Input required legend="Telefone" type="text" placeholder="(XX)91234-5678" />
+        <Input required legend="Telefone" type="tel" placeholder="(XX)91234-5678" />
       </div>
       <TextArea required legend="Mensagem" placeholder="Escreva seu pedido" />
       
-      <section className="space-y-4 mt-6 ">
+      <section className="space-y-4 mt-6">
         <hr className="border-t-2 border-gray-300" />
         
-        <div className="flex items-center gap-2 text-left">
+        <div className="flex items-center gap-2 text-left sm:gap-4">
           <input
             type="checkbox"
             id="acceptChrist"
             checked={acceptedChrist}
             onChange={() => setAcceptedChrist(!acceptedChrist)}
-            className="h-4 w-4 accent-neutral-800"
+            className="h-4 w-4 accent-neutral-800 cursor-pointer"
           />
-          <label htmlFor="acceptChrist" className="text-sm">
+          <label htmlFor="acceptChrist" className="text-sm sm:text-base">
             Quero aceitar a <strong>Jesus Cristo</strong> como meu Senhor e Salvador
           </label>
         </div>
 
-        <div className="flex items-center gap-2 text-left">
+        <div className="flex items-center gap-2 text-left sm:gap-4 ">
           <input
             type="checkbox"
             id="learnMore"
             checked={learnMore}
             onChange={() => setLearnMore(!learnMore)}
-            className="h-4 w-4 accent-neutral-800"
+            className="h-4 w-4 accent-neutral-800 cursor-pointer"
           />
-          <label htmlFor="learnMore" className="text-sm">
+          <label htmlFor="learnMore" className="text-sm sm:text-base">
             Ainda não aceitei a Cristo, mas gostaria de aprender mais da Palavra de Deus
           </label>
         </div>

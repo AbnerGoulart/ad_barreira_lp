@@ -10,7 +10,7 @@ export function Navigation() {
     const isActive = location.pathname === path;
     return `block px-4 py-2 text-center ${
       isActive
-        ? "bg-black text-white font-medium rounded-lg"
+        ? "bg-neutral-800 text-neutral-100 border-gray-600 font-medium rounded-lg"
         : "hover:bg-gray-200 hover:rounded-lg hover:font-medium"
     }`;
   };
@@ -29,7 +29,7 @@ export function Navigation() {
 
       {/* Container do menu (Mobile e Desktop) */}
       <div
-        className={`absolute left-0 top-full w-full bg-gray-200 text-black overflow-hidden 
+        className={`absolute left-0 top-full w-full bg-neutral-100 text-neutral-900 overflow-hidden 
           transition-all duration-300 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"} 
           md:opacity-100 md:max-h-full md:relative md:bg-transparent -screen`}
       >
