@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 export function AppLayout() {
   return (
@@ -8,6 +9,7 @@ export function AppLayout() {
       <main className="w-full md:w-auto mt-19 md:mt-0"> 
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 }
