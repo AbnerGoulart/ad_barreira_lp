@@ -1,10 +1,10 @@
 import film from "../assets/4442892-hd_1920_1080_24fps.mp4";
 import { motion } from "framer-motion";
+import { SocialMedia } from "./SocialMedia";
 
 export function Intro() {
   return (
     <div className="relative w-full h-[100vw] md:h-[56.25vw] lg:h-[56.25vw] max-h-[90vh]">
-      {/* Vídeo de fundo com proporção dinâmica */}
       <video
         src={film}
         autoPlay
@@ -12,14 +12,12 @@ export function Intro() {
         muted
         className="w-full h-full object-cover"
       />
-
-      {/* Texto com efeito fade-in e responsividade */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black/50 px-4">
         <motion.h1
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-normal "
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-normal"
         >
           AD BARREIRA
         </motion.h1>
@@ -31,6 +29,7 @@ export function Intro() {
         >
           Uma casa de oração
         </motion.h3>
+        <SocialMedia />
       </div>
     </div>
   );
