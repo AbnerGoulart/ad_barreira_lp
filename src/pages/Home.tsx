@@ -1,16 +1,10 @@
-import { useState } from "react";
 import { Banner } from "../components/Banner";
-import { Input } from "../components/Input";
+import { Form } from "../components/Form";
 import { Intro } from "../components/Intro";
-import { Select } from "../components/Select";
-import { prayerCategories } from "../utils/prayerCategories";
 
 export function Home() {
-  const [category, setCategory] = useState("")
-
   return (
     <div className="flex flex-col items-center justify-center text-gray-700">
-
       <Intro />
 
       <section className="bg-neutral-100 text-center space-y-8 w-full py-8 px-8 md:px-8 font-geist">
@@ -29,35 +23,24 @@ export function Home() {
 
       <Banner />
 
-      <section className="bg-neutral-100 text-center space-y-8 w-full py-8 px-8 md:px-8">
-        <h1 className="text-6xl font-black">
+      <section className="bg-neutral-100 text-center w-full py-8 px-6 md:px-12 lg:px-20 flex flex-col items-center">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black">
           PEDIDOS DE ORAÇÃO
         </h1>
 
-        <form action="" className="bg-transparent space-y-8 py-8 px-8 md:px-8 font-geist">
-          <Input 
-            required
-            legend="e-mail"
-            type="text"
-            placeholder="seu@email.com"
-          />
-          <Select 
-            required
-            legend="Categoria"
-            value={category}
-            onChange={event => setCategory(event.target.value)}
-          >
-            {prayerCategories.map((prayerCategory) => (
-              <option key={prayerCategory.id} value={prayerCategory.name}>
-                {prayerCategory.name}
-              </option>
-            ))}
-          </Select>
+        <p className="text-lg md:text-xl text-gray-700 max-w-2xl mt-4 font-geist">
+          Jesus disse:{" "}
+          <strong>
+            "Pedi, e dar-se-vos-á; buscai, e encontrareis; batei, e
+            abrir-se-vos-á."
+          </strong><br />
+          Apresente sua oração e confie que o Senhor cuida de você.
+        </p>
 
-        </form>
+        <div className="w-full max-w-lg md:max-w-2xl mt-6">
+          <Form />
+        </div>
       </section>
-
-
     </div>
   );
 }
