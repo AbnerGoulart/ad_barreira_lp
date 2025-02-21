@@ -1,21 +1,21 @@
 type Props = React.ComponentProps<"input"> & {
-  legend?: string
-}
+  legend?: string;
+};
 
-export function Input({ legend, type="text", ...rest}: Props){
+export function Input({ legend, type = "text", ...rest }: Props) {
   return (
-    <fieldset className="flex flex-1 max-h-20 text-gray-700 focus-within:text-gray-700">
+    <fieldset className="flex flex-col items-start w-full text-gray-700 focus-within:text-gray-700">
       {legend && (
-        <legend className="uppercase text-xxs mb-2 text-inherit">
+        <label className="uppercase text-xxs mb-1 text-inherit">
           {legend}
-        </legend>
+        </label>
       )}
 
       <input
-        type="text"
+        type={type}
         className="w-full h-12 rounded-lg border border-gray-300 px-4 text-sm text-gray-900 bg-transparent"
-        {...rest} 
+        {...rest}
       />
     </fieldset>
-  )
+  );
 }
