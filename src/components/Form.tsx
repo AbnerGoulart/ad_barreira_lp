@@ -35,7 +35,7 @@ export function Form() {
       <TextArea required legend="Mensagem" placeholder="Escreva seu pedido" />
       
       <section className="space-y-4 mt-6">
-        <hr className="border-t-2 border-gray-300" />
+        <hr className="border-t-1 border-gray-300" />
         
         <div className="flex items-center gap-2 text-left sm:gap-4">
           <input

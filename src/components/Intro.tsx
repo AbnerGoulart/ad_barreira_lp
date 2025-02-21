@@ -24,7 +24,7 @@ export function Intro() {
         <motion.h3
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
+          transition={{ duration: 1, delay: 0.5 }}
           className="text-lg sm:text-xl md:text-2xl lg:text-5xl"
         >
           Uma casa de oração
