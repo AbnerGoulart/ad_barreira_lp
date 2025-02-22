@@ -1,8 +1,8 @@
-import logo from "../assets/LOGO ASSEMBLÉIA DE DEUS BARREIRA(1).jpg"
+import logo from "../assets/utils/3-removebg-preview.png"
 
 export function Logo() {
   return (
-    <div className="w-16 md:w-20 lg:w-24">
+    <div className="w-42 md:w-48 lg:w-48">
       <a href="/">
         <img
           src={logo}
