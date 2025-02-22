@@ -19,8 +19,8 @@ export function Intro() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="flex items-baseline justify-center gap-1 sm:gap-6 text-4xl 
-          sm:text-5xl md:text-6xl lg:text-9xl font-normal"
+          className="flex items-baseline justify-center gap-1 sm:gap-4 text-2xl xs:text-2xl
+          sm:text-4xl md:text-5xl lg:text-7xl font-normal"
         >
           <motion.img
             src={logoWhite}
@@ -28,21 +28,22 @@ export function Intro() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="w-13 sm:w-12 md:w-20 lg:w-46 max-h-12 sm:max-h-16 md:max-h-24 lg:max-h-32 h-auto"
+            className="xs:w-7 sm:w-12 md:w-16 lg:w-24"
           />
           BARREIRA
         </motion.h1>
-        <motion.h3
+        <motion.p
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
           className="text-center text-lg text-black bg-white 
-             sm:text-xl sm:w-[190px] sm:tracking-[3px] 
-             md:w-auto md:text-xl md:tracking-[9px] 
-             lg:text-3xl lg:tracking-[25px]"
+             xs:text-xs xs:w-[150px] xs:tracking-[1.5px] 
+             sm:text-sm sm:w-auto sm:tracking-[5px] 
+             md:w-auto md:text-lg md:tracking-[7px] 
+             lg:text-xl lg:tracking-[14px]"
         >
           ASSEMBLEIA DE DEUS
-        </motion.h3>
+        </motion.p>
         <SocialMedia />
       </div>
     </div>
