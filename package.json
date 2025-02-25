@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.20.6",
     "@tailwindcss/vite": "^4.0.7",
     "framer-motion": "^12.4.5",
     "lucide": "^0.475.0",
