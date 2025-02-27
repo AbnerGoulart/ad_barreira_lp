@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
+import { Button } from "./Button";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
