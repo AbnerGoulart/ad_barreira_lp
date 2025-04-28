@@ -1,1 +1,1 @@
-export * from "./ChurchHistory";
+export { ChurchHistory } from './ChurchHistory'
