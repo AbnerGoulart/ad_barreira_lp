@@ -1,16 +1,8 @@
-import { motion } from "framer-motion"
-
-export const SectionHeader = ({ title }: { title: string }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-    className="text-center mb-12 md:mb-20"
-  >
-    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-neutral-900">
-      {title}
-    </h2>
-    <div className="mt-4 h-1 w-20 bg-neutral-900 mx-auto rounded-full" />
-  </motion.div>
-)
+export const SectionHeader = ({ title }: { title: string }) => {
+  return (
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold text-neutral-800">{title}</h2>
+      <div className="h-1 w-20 bg-red-800 mx-auto mt-4 rounded-full" />
+    </div>
+  );
+};
