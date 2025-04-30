@@ -28,7 +28,12 @@ export const Timeline = () => {
         />
         <div className="relative z-10 space-y-24 pt-16">
           {timelineData.map((item, index) => (
-            <div ref={(el) => (itemRefs.current[index] = el)} key={index}>
+            <div
+              ref={(el) => {
+                itemRefs.current[index] = el;
+              }}
+              key={index}
+            >
               <TimelineItem {...item} index={index} scrollYProgress={scrollYProgress} />
             </div>
           ))}

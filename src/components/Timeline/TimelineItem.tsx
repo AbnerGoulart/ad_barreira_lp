@@ -1,5 +1,6 @@
 import { motion, useTransform } from "framer-motion";
 import { TimelineItemProps } from "./types";
+import { TimelineImage } from "./TimelineImage"; // Importe o novo componente
 
 export const TimelineItem = ({
   year,
@@ -12,13 +13,43 @@ export const TimelineItem = ({
   const imageFirst = imageSide === "left";
   const textAlignClass = imageFirst ? "text-left" : "text-right";
 
-  const thresholdStart = index === 0 ? 0.1 : index * 0.2; // Ajuste inicial para o primeiro item
+  const thresholdStart = index === 0 ? 0.1 : index * 0.2;
   const thresholdEnd = thresholdStart + 0.1;
 
-  const opacity = useTransform(scrollYProgress, [thresholdStart, thresholdEnd], [0, 1], { clamp: true });
-  const translateXImage = useTransform(scrollYProgress, [thresholdStart, thresholdEnd], [imageFirst ? -100 : 100, 0], { clamp: true });
-  const translateXText = useTransform(scrollYProgress, [thresholdStart, thresholdEnd], [imageFirst ? 100 : -100, 0], { clamp: true });
-  const scaleMarker = useTransform(scrollYProgress, [thresholdStart, thresholdStart + 0.05, thresholdEnd], [0, 1.2, 1], { clamp: true });
+  const opacity =
+    index === 0
+      ? 1
+      : useTransform(scrollYProgress, [thresholdStart, thresholdEnd], [0, 1], { clamp: true });
+
+  const translateXImage =
+    index === 0
+      ? 0
+      : useTransform(
+          scrollYProgress,
+          [thresholdStart, thresholdEnd],
+          [imageFirst ? -100 : 100, 0],
+          { clamp: true }
+        );
+
+  const translateXText =
+    index === 0
+      ? 0
+      : useTransform(
+          scrollYProgress,
+          [thresholdStart, thresholdEnd],
+          [imageFirst ? 100 : -100, 0],
+          { clamp: true }
+        );
+
+  const scaleMarker =
+    index === 0
+      ? 1
+      : useTransform(
+          scrollYProgress,
+          [thresholdStart, thresholdStart + 0.05, thresholdEnd],
+          [0, 1.2, 1],
+          { clamp: true }
+        );
 
   return (
     <div className="relative py-12">
@@ -32,9 +63,7 @@ export const TimelineItem = ({
               className="w-[45%]"
               style={{ x: translateXImage, opacity }}
             >
-              <div className="aspect-video w-full bg-neutral-200 rounded-xl shadow-lg flex items-center justify-center overflow-hidden">
-                <span className="text-3xl text-neutral-400">Imagem 16:9</span>
-              </div>
+              <TimelineImage /> {/* Use o novo componente aqui */}
             </motion.div>
             <motion.div
               className="relative flex-shrink-0"
@@ -75,9 +104,7 @@ export const TimelineItem = ({
               className="w-[45%] order-3"
               style={{ x: translateXImage, opacity }}
             >
-              <div className="aspect-video w-full bg-neutral-200 rounded-xl shadow-lg flex items-center justify-center overflow-hidden">
-                <span className="text-3xl text-neutral-400">Imagem 16:9</span>
-              </div>
+              <TimelineImage /> {/* Use o novo componente aqui */}
             </motion.div>
           </>
         )}
