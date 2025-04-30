@@ -5,8 +5,6 @@ export interface TimelineItemProps {
   imageSide: "left" | "right";
 }
 
-export interface FinalMessageProps {
-  title: string;
-  verse: string;
-  reference: string;
+export interface TimelineData {
+  items: TimelineItemProps[];
 }
