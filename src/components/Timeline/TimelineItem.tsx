@@ -1,12 +1,14 @@
 import { motion, useTransform } from "framer-motion";
 import { TimelineItemProps } from "./types";
-import { TimelineImage } from "./TimelineImage"; // Importe o novo componente
+import { TimelineImage } from "./TimelineImage";
 
 export const TimelineItem = ({
   year,
   title,
   description,
   imageSide,
+  imageUrl,
+  imageUrls,
   index,
   scrollYProgress,
 }: TimelineItemProps & { index: number; scrollYProgress: any }) => {
@@ -63,7 +65,7 @@ export const TimelineItem = ({
               className="w-[45%]"
               style={{ x: translateXImage, opacity }}
             >
-              <TimelineImage /> {/* Use o novo componente aqui */}
+              <TimelineImage imageUrl={imageUrl} imageUrls={imageUrls} />
             </motion.div>
             <motion.div
               className="relative flex-shrink-0"
@@ -104,7 +106,7 @@ export const TimelineItem = ({
               className="w-[45%] order-3"
               style={{ x: translateXImage, opacity }}
             >
-              <TimelineImage /> {/* Use o novo componente aqui */}
+              <TimelineImage imageUrl={imageUrl} imageUrls={imageUrls} />
             </motion.div>
           </>
         )}

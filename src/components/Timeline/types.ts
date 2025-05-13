@@ -3,6 +3,8 @@ export interface TimelineItemProps {
   title: string;
   description: string;
   imageSide: "left" | "right";
+  imageUrl?: string;
+  imageUrls?: string[];
 }
 
 export interface TimelineData {
